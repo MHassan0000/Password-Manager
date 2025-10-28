@@ -5,16 +5,34 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Manager from './components/Manager'
 import Footer from './components/Footer'
+import About from './components/About'
+import Services from './components/Services'
 
 function App() {
- 
-  
-  const [count, setCount] = useState(0)
+  const [route, setRoute] = useState(() => window.location.hash.replace('#', '') || '/');
+
+  useEffect(() => {
+    const handleHashChange = () => setRoute(window.location.hash.replace('#', '') || '/');
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  const renderPage = () => {
+    switch (route) {
+      case '/about':
+        return <About />
+      case '/services':
+        return <Services />
+      case '/':
+      default:
+        return <Manager />
+    }
+  }
 
   return (
     <>
       <Navbar/>
-      <Manager/> 
+      {renderPage()}
       <Footer/>
     </>
   )

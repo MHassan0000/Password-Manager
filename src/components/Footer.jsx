@@ -12,15 +12,11 @@ const Footer = () => {
                         &lt; Pwd /&gt;
                     </span>
                 </div>
-                <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
-                    <a href="#" className="hover:text-yellow-200 transition-colors duration-200 font-semibold">Home</a>
-                    <a href="#" className="hover:text-pink-200 transition-colors duration-200 font-semibold">About</a>
-                    <a href="#" className="hover:text-blue-200 transition-colors duration-200 font-semibold">Contact</a>
-                </div>
+               
                 <div className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm text-gray-200">
                     <span className="inline-flex items-center gap-1">
-                        <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9z" stroke="#fff" strokeWidth="2" opacity="0.3"/><path d="M12 7v5l3 3" stroke="#fff" strokeWidth="2" strokeLinecap="round"/></svg>
-                        2023 Your Company
+                        
+                        2023 Pwd
                     </span>
                     <span className="hidden sm:inline">|</span>
                     <span>All rights reserved.</span>
