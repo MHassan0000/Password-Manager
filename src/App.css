@@ -1,0 +1,96 @@
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #1a1333;
+  color: #fff;
+  margin: 0;
+  min-height: 100vh;
+  transition: background 0.3s;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #2d225a;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #f472b6 0%, #a78bfa 50%, #60a5fa 100%);
+  border-radius: 8px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+input, button, textarea, select {
+  font-family: inherit;
+  outline: none;
+}
+
+input:focus, button:focus, textarea:focus, select:focus {
+  box-shadow: 0 0 0 2px #f472b644;
+  border-color: #f472b6;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+}
+
+.backdrop-blur-2xl {
+  backdrop-filter: blur(24px);
+}
+
+/* Animations */
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+@keyframes fade-in-down {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-down {
+  animation: fade-in-down 0.7s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+@keyframes gradient-x {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 8s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 4s linear infinite;
+}
+
+@keyframes bounce-once {
+  0%, 100% { transform: translateY(0); }
+  20% { transform: translateY(-10px); }
+  40% { transform: translateY(0); }
+}
+.animate-bounce-once {
+  animation: bounce-once 0.7s cubic-bezier(0.4,0,0.2,1) 1;
+}
+
+@keyframes row-pop {
+  0% { background: #f472b6; color: #fff; }
+  100% { background: inherit; color: inherit; }
+}
+.animate-row-pop {
+  animation: row-pop 0.4s cubic-bezier(0.4,0,0.2,1);
+}
